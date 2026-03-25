@@ -1,8 +1,13 @@
-# 读取输入文件
-input_file = "week1_posts.txt"
-output_file = "week1_long_posts.txt"
+from pathlib import Path
 
-# 打开输入文件并读取所有行
+# 获取当前脚本所在目录
+base_dir = Path(__file__).resolve().parent
+
+# 拼接输入文件和输出文件路径
+input_file = base_dir.parent / "data" / "week1_posts.txt"
+output_file = base_dir.parent / "data" / "week1_long_posts.txt"
+
+# 读取输入文件
 with open(input_file, "r", encoding="utf-8") as f:
     lines = f.readlines()
 
