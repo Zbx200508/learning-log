@@ -19,7 +19,7 @@ total_count = len(posts)
 print(f"总共有 {total_count} 条文本")
 
 # 筛选长度大于 20 个字的文本
-long_posts = [post for post in posts if len(post) > 20]
+long_posts = [post for post in posts if len(post) > 15]
 
 print(f"长度大于 20 个字的文本有 {len(long_posts)} 条")
 
